@@ -7,6 +7,7 @@ export const useDictionaryStore = defineStore('dictionary', {
     currentId: null,
     recentHistory: [],
     searchQuery: '',
+    treeOpen: false,
   }),
 
   getters: {
@@ -59,6 +60,7 @@ export const useDictionaryStore = defineStore('dictionary', {
   actions: {
     selectConcept(id) {
       this.currentId = id
+      this.treeOpen = false
       this.recentHistory = [id, ...this.recentHistory.filter((h) => h !== id)].slice(0, 5)
     },
     setSearch(query) {
@@ -69,6 +71,12 @@ export const useDictionaryStore = defineStore('dictionary', {
     },
     goHome() {
       this.currentId = null
+      this.treeOpen = false
+      this.searchQuery = ''
+    },
+    showTree() {
+      this.currentId = null
+      this.treeOpen = true
       this.searchQuery = ''
     },
   },

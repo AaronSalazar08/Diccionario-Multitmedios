@@ -4,6 +4,7 @@ import AppHeader from '@/components/AppHeader.vue'
 import SidePanel from '@/components/SidePanel.vue'
 import ConceptEntry from '@/components/ConceptEntry.vue'
 import BrowseView from '@/components/BrowseView.vue'
+import ConceptTree from '@/components/ConceptTree.vue'
 
 const store = useDictionaryStore()
 </script>
@@ -16,7 +17,8 @@ const store = useDictionaryStore()
       <main class="main" role="main">
         <Transition name="view" mode="out-in">
           <ConceptEntry v-if="store.currentId" :key="store.currentId" />
-          <BrowseView v-else />
+          <ConceptTree v-else-if="store.treeOpen" key="tree" />
+          <BrowseView v-else key="browse" />
         </Transition>
       </main>
     </div>

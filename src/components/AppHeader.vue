@@ -88,6 +88,15 @@ onBeforeUnmount(() => {
       </div>
     </button>
 
+    <nav class="view-tabs" aria-label="Cambiar de vista">
+      <button class="view-tab" :class="{ active: !store.treeOpen }" @click="store.goHome()">
+        Diccionario
+      </button>
+      <button class="view-tab" :class="{ active: store.treeOpen }" @click="store.showTree()">
+        Árbol conceptual
+      </button>
+    </nav>
+
     <div class="search-wrapper" ref="wrapperRef">
       <div class="search-box" :class="{ focused: isOpen }">
         <span class="search-prompt">›</span>
@@ -186,6 +195,34 @@ onBeforeUnmount(() => {
   color: var(--text-muted);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.view-tabs {
+  display: flex;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.view-tab {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.view-tab:hover {
+  color: var(--text);
+}
+
+.view-tab.active {
+  color: var(--signal);
+  border-color: var(--rim);
+  background: var(--signal-dim);
 }
 
 .search-wrapper {
@@ -325,5 +362,17 @@ onBeforeUnmount(() => {
 .dropdown-leave-to {
   opacity: 0;
   transform: translateY(-6px);
+}
+
+@media (max-width: 767px) {
+  .app-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .search-wrapper {
+    order: 3;
+    flex-basis: 100%;
+    margin-left: 0;
+  }
 }
 </style>
