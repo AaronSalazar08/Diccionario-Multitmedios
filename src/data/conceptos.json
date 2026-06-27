@@ -1,0 +1,1218 @@
+[
+  {
+    "id": 1,
+    "term": "Acordeones",
+    "letter": "A",
+    "definition": "Componente de interfaz de usuario que permite mostrar u ocultar secciones de contenido de forma interactiva. En HTML moderno se implementan mediante los elementos `<details>` y `<summary>` sin necesidad de JavaScript.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<details>\n  <summary>¿Qué es HTML?</summary>\n  <p>HTML es el lenguaje de marcado estándar para crear páginas web.</p>\n</details>"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "term": "Alcance (Scope)",
+    "letter": "A",
+    "definition": "Contexto en el que una variable, función o selector es accesible y válido. En JavaScript determina la visibilidad de las variables; en CSS, limita la aplicación de estilos a un subárbol del DOM mediante `@scope`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Scope en JavaScript\nfunction saludar() {\n  const mensaje = \"Hola\"; // solo visible dentro de esta función\n  console.log(mensaje);\n}"
+      },
+      {
+        "language": "css",
+        "code": "/* Scope en CSS */\n@scope (.card) {\n  p { color: navy; }\n}"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "term": "AMD (Asynchronous Module Definition)",
+    "letter": "A",
+    "definition": "Formato de definición de módulos para JavaScript en entornos de navegador que permite cargar dependencias de forma asíncrona. Fue popularizado por RequireJS y precede al estándar ESM.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "define(['dependencia'], function(dep) {\n  return {\n    metodo: function() { return dep.valor; }\n  };\n});"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "term": "Animaciones",
+    "letter": "A",
+    "definition": "Técnica CSS que permite transicionar entre estados de estilo de forma controlada mediante la regla `@keyframes`. Permiten crear efectos visuales complejos definiendo fotogramas clave y propiedades de temporización.",
+    "examples": [
+      {
+        "language": "css",
+        "code": "@keyframes desvanece {\n  from { opacity: 0; }\n  to   { opacity: 1; }\n}\n\n.elemento {\n  animation: desvanece 0.5s ease-in;\n}"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "term": "APIs (Application Programming Interfaces)",
+    "letter": "A",
+    "definition": "Conjunto de definiciones, protocolos y herramientas que permiten la comunicación entre distintos sistemas de software. En el contexto web, pueden ser APIs del navegador (DOM, Fetch, Storage) o APIs de servicios externos que exponen datos mediante HTTP.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const respuesta = await fetch('https://api.ejemplo.com/usuarios');\nconst datos = await respuesta.json();"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "term": "Asincronía",
+    "letter": "A",
+    "definition": "Modelo de ejecución en el que las operaciones pueden iniciarse sin bloquear el hilo principal, continuando con el resto del código. En JavaScript se gestiona mediante callbacks, Promesas y la sintaxis `async/await`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "console.log(\"inicio\");\nsetTimeout(() => console.log(\"asíncrono\"), 1000);\nconsole.log(\"fin\");\n// Salida: inicio → fin → asíncrono"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "term": "Async / Await",
+    "letter": "A",
+    "definition": "Sintaxis de JavaScript que permite escribir código asíncrono con apariencia de código síncrono. `async` declara una función que retorna una Promesa; `await` pausa la ejecución de esa función hasta que la Promesa se resuelva.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "async function obtenerUsuario(id) {\n  const respuesta = await fetch(`/api/usuarios/${id}`);\n  const usuario   = await respuesta.json();\n  return usuario;\n}"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "term": "Axios",
+    "letter": "A",
+    "definition": "Librería JavaScript basada en Promesas para realizar peticiones HTTP tanto en el navegador como en Node.js. Ofrece interceptores, transformación automática de JSON, cancelación de peticiones y manejo centralizado de errores.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "import axios from 'axios';\n\nconst { data } = await axios.get('/api/productos');\nconsole.log(data);"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "term": "Bare Imports",
+    "letter": "B",
+    "definition": "Forma de importar módulos utilizando únicamente el nombre del paquete, sin rutas relativas ni absolutas. Son resueltos por el bundler o por Import Maps en el navegador.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "import { reactive } from 'vue';\nimport axios from 'axios';"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "term": "Barrels",
+    "letter": "B",
+    "definition": "Archivo `index.js` o `index.ts` que reexporta múltiples módulos de un directorio, simplificando las importaciones al exponer una interfaz única desde una carpeta.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// components/index.js (barrel)\nexport { default as Button } from './Button.js';\nexport { default as Card }   from './Card.js';\n\n// consumo simplificado\nimport { Button, Card } from './components';"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "term": "Bordes",
+    "letter": "B",
+    "definition": "Propiedad CSS que define la línea que rodea el contorno de un elemento. Forma parte del Box Model y admite configuración de grosor, estilo y color, así como variantes individuales por lado y esquinas redondeadas mediante `border-radius`.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".caja {\n  border: 2px solid #333;\n  border-radius: 8px;\n  border-top: 4px dashed navy;\n}"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "term": "Box Model",
+    "letter": "B",
+    "definition": "Modelo que describe el espacio que ocupa un elemento HTML, compuesto de cuatro capas concéntricas: contenido (`content`), relleno interior (`padding`), borde (`border`) y margen exterior (`margin`). Se controla con la propiedad `box-sizing`.",
+    "examples": [
+      {
+        "language": "css",
+        "code": "* {\n  box-sizing: border-box; /* padding y border incluidos en el ancho total */\n}\n\n.tarjeta {\n  width: 300px;\n  padding: 16px;\n  border: 1px solid #ccc;\n  margin: 8px;\n}"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "term": "BroadcastChannel API",
+    "letter": "B",
+    "definition": "API del navegador que permite la comunicación entre contextos de navegación del mismo origen (pestañas, ventanas, iframes y workers) mediante un canal de mensajes compartido.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Emisor (pestaña A)\nconst canal = new BroadcastChannel('notificaciones');\ncanal.postMessage({ tipo: 'actualizar' });\n\n// Receptor (pestaña B)\ncanal.onmessage = (evento) => console.log(evento.data);"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "term": "Caché",
+    "letter": "C",
+    "definition": "Mecanismo de almacenamiento temporal que guarda respuestas de recursos (archivos, peticiones HTTP) para evitar solicitudes redundantes y mejorar el rendimiento. En la web se gestiona a nivel de navegador, servidor o mediante Service Workers.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Cache API con Service Worker\nconst cache = await caches.open('v1');\nawait cache.add('/estilos.css');"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "term": "Cascada CSS",
+    "letter": "C",
+    "definition": "Algoritmo que determina qué declaración de estilo prevalece cuando varias reglas apuntan al mismo elemento. Considera el origen de la hoja de estilos, la capa (`@layer`), la especificidad del selector y el orden de aparición.",
+    "examples": [
+      {
+        "language": "css",
+        "code": "@layer base {\n  p { color: black; }\n}\n\n@layer tema {\n  p { color: navy; } /* gana por orden de capa */\n}"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "term": "CDN (Content Delivery Network)",
+    "letter": "C",
+    "definition": "Red distribuida de servidores que entrega recursos estáticos (imágenes, scripts, estilos) desde el nodo geográficamente más cercano al usuario, reduciendo la latencia y mejorando los tiempos de carga.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "term": "Combinadores",
+    "letter": "C",
+    "definition": "Símbolos utilizados en los selectores CSS para expresar relaciones estructurales entre elementos del DOM. Los principales son: descendiente (espacio), hijo directo (`>`), hermano adyacente (`+`) y hermano general (`~`).",
+    "examples": [
+      {
+        "language": "css",
+        "code": "nav > ul  { list-style: none; }   /* hijo directo */\nh2 + p    { margin-top: 0; }      /* hermano adyacente */\nh2 ~ p    { color: gray; }        /* hermanos generales */\nsection p { line-height: 1.6; }   /* descendiente */"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "term": "Comprobaciones",
+    "letter": "C",
+    "definition": "Validaciones que verifican el tipo, formato o valor de datos durante la ejecución de un programa. En JavaScript se realizan con operadores como `typeof` e `instanceof`; en TypeScript, mediante el sistema de tipos estáticos.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "function procesar(valor) {\n  if (typeof valor !== 'number') throw new TypeError('Se esperaba un número');\n  return valor * 2;\n}"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "term": "Custom Elements",
+    "letter": "C",
+    "definition": "API de la plataforma web que permite definir nuevas etiquetas HTML reutilizables con comportamiento propio. Son la base de los Web Components y se registran mediante `customElements.define()`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "class MiBoton extends HTMLElement {\n  connectedCallback() {\n    this.innerHTML = `<button>Click</button>`;\n  }\n}\ncustomElements.define('mi-boton', MiBoton);"
+      },
+      {
+        "language": "html",
+        "code": "<mi-boton></mi-boton>"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "term": "display",
+    "letter": "D",
+    "definition": "Propiedad CSS fundamental que controla el tipo de caja que genera un elemento y su comportamiento en el flujo del documento. Valores comunes: `block`, `inline`, `inline-block`, `flex`, `grid` y `none`.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".contenedor { display: flex; }\n.oculto     { display: none; }\n.icono      { display: inline-block; width: 24px; }"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "term": "DOM (Document Object Model)",
+    "letter": "D",
+    "definition": "Representación estructurada en forma de árbol de un documento HTML o XML que el navegador expone a JavaScript. Permite leer, modificar, agregar o eliminar elementos y atributos de la página de forma dinámica.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const titulo = document.querySelector('h1');\ntitulo.textContent = 'Nuevo título';\ntitulo.style.color = 'navy';"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "term": "Elemento",
+    "letter": "E",
+    "definition": "Unidad básica del lenguaje HTML formada por una etiqueta de apertura, contenido opcional y etiqueta de cierre. Cada elemento representa un nodo en el DOM y tiene semántica, atributos y comportamiento propios.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<article>\n  <h2>Título del artículo</h2>\n  <p>Contenido del párrafo.</p>\n</article>"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "term": "ESM (ECMAScript Modules)",
+    "letter": "E",
+    "definition": "Sistema estándar de módulos de JavaScript definido en la especificación ECMAScript. Utiliza las palabras clave `import` y `export` y es compatible de forma nativa con navegadores modernos y Node.js.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// matematicas.js\nexport const sumar = (a, b) => a + b;\n\n// main.js\nimport { sumar } from './matematicas.js';\nconsole.log(sumar(2, 3)); // 5"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "term": "Especificidad CSS",
+    "letter": "E",
+    "definition": "Valor numérico que determina qué regla CSS prevalece cuando múltiples selectores apuntan al mismo elemento. Se calcula según la combinación de selectores de ID, clases/atributos/pseudoclases y elementos/pseudoelementos.",
+    "examples": [
+      {
+        "language": "css",
+        "code": "p         { color: black; }  /* especificidad 0-0-1 */\n.texto    { color: navy; }   /* especificidad 0-1-0 — gana */\n#principal{ color: red; }    /* especificidad 1-0-0 — siempre gana */"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "term": "Estructura",
+    "letter": "E",
+    "definition": "Organización jerárquica y semántica del marcado HTML que define la disposición lógica del contenido de una página. Una buena estructura mejora la accesibilidad, el SEO y la mantenibilidad del código.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<!DOCTYPE html>\n<html lang=\"es\">\n  <head><title>Página</title></head>\n  <body>\n    <header><nav>…</nav></header>\n    <main><article>…</article></main>\n    <footer>…</footer>\n  </body>\n</html>"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "term": "Etiqueta (HTML)",
+    "letter": "E",
+    "definition": "Marcador de texto encerrado entre corchetes angulares (`< >`) que indica al navegador cómo interpretar el contenido. Pueden ser de apertura (`<p>`), cierre (`</p>`) o autocerradas (`<img />`).",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<h1>Título principal</h1>\n<img src=\"foto.jpg\" alt=\"Descripción\" />\n<a href=\"/contacto\">Contáctanos</a>"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "term": "Eventos JS",
+    "letter": "E",
+    "definition": "Señales emitidas por el navegador o el código cuando ocurre una acción (clic, teclado, carga, etc.). Se gestionan registrando oyentes (*listeners*) mediante `addEventListener` sobre elementos del DOM o el objeto global.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "document.querySelector('button').addEventListener('click', (evento) => {\n  console.log('Botón pulsado:', evento.target);\n});"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "term": "Fallbacks",
+    "letter": "F",
+    "definition": "Valor alternativo o comportamiento de reserva que se aplica cuando el navegador no soporta una característica CSS o JavaScript más moderna. Garantizan compatibilidad progresiva sin romper la experiencia del usuario.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".caja {\n  background: gray;                    /* fallback para navegadores sin soporte */\n  background: oklch(60% 0.2 240);\n}"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "term": "Fetch",
+    "letter": "F",
+    "definition": "API nativa del navegador y de Node.js (v18+) que permite realizar peticiones HTTP de forma asíncrona. Devuelve una Promesa que resuelve con un objeto `Response`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const respuesta = await fetch('/api/datos', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({ nombre: 'Ana' })\n});\nconst datos = await respuesta.json();"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "term": "Fichero",
+    "letter": "F",
+    "definition": "Unidad de almacenamiento de datos en un sistema de archivos. En el contexto del desarrollo web, hace referencia a los archivos del proyecto (`.html`, `.css`, `.js`, etc.) que componen el código fuente de una aplicación.",
+    "examples": [
+      {
+        "language": "text",
+        "code": "proyecto/\n├── index.html\n├── styles/\n│   └── main.css\n└── scripts/\n    └── app.js"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "term": "Filtros",
+    "letter": "F",
+    "definition": "Propiedad CSS (`filter`) que aplica efectos visuales a un elemento como desenfoque, brillo, contraste o escala de grises. También disponible como `backdrop-filter` para aplicar el efecto al fondo visible detrás de un elemento.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".imagen-desenfocada {\n  filter: blur(4px);\n}\n\n.panel-vidrio {\n  backdrop-filter: blur(10px) brightness(0.9);\n}"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "term": "Flex (Flexbox)",
+    "letter": "F",
+    "definition": "Módulo de diseño CSS unidimensional que distribuye el espacio entre los elementos de un contenedor a lo largo de un eje principal (horizontal o vertical). Se activa con `display: flex`.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".barra-nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 1rem;\n}"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "term": "Fragmentos",
+    "letter": "F",
+    "definition": "En JavaScript, subcadenas extraídas de un texto mediante métodos como `slice()`. En HTML, `DocumentFragment` permite agrupar nodos del DOM sin insertarlos en el árbol principal hasta el momento necesario, evitando reflows innecesarios.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const texto = \"Hola, mundo\";\nconsole.log(texto.slice(0, 4)); // \"Hola\"\n\nconst fragmento = new DocumentFragment();\nfragmento.appendChild(document.createElement('p'));\ndocument.body.appendChild(fragmento);"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "term": "Frame",
+    "letter": "F",
+    "definition": "Cada uno de los fotogramas que componen una secuencia de animación. En programación web también hace referencia a los ciclos de renderizado del navegador, gestionados con `requestAnimationFrame`, o a documentos embebidos mediante `<iframe>`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "function animar() {\n  // se ejecuta en cada frame del navegador (~60 fps)\n  requestAnimationFrame(animar);\n}\nrequestAnimationFrame(animar);"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "term": "Framework",
+    "letter": "F",
+    "definition": "Estructura de software que proporciona una base predefinida, convenciones y herramientas para desarrollar aplicaciones. A diferencia de una librería, el framework controla el flujo de la aplicación (inversión de control). Ejemplos: React, Vue, Angular, Astro.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Vue 3 — el framework gestiona el ciclo de vida del componente\nimport { createApp } from 'vue';\ncreateApp({ template: '<h1>Hola</h1>' }).mount('#app');"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "term": "Gaps",
+    "letter": "G",
+    "definition": "Propiedad CSS que define el espacio entre filas y columnas en contenedores Flex o Grid. Equivale a la combinación de `row-gap` y `column-gap`, y reemplaza el uso de márgenes para separar elementos internos.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 1.5rem;       /* igual en filas y columnas */\n  /* gap: 1rem 2rem; fila columna */\n}"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "term": "Garbage Collector",
+    "letter": "G",
+    "definition": "Componente del motor de JavaScript (como V8) encargado de liberar automáticamente la memoria ocupada por objetos que ya no son accesibles desde el código. Utiliza algoritmos como *mark-and-sweep*.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "function crearObjeto() {\n  let datos = { valor: 42 }; // asignado en heap\n  return datos;\n}\n// Cuando 'datos' ya no es referenciado, el GC libera esa memoria"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "term": "Grid",
+    "letter": "G",
+    "definition": "Módulo de diseño CSS bidimensional que divide el contenedor en filas y columnas, permitiendo posicionar elementos en celdas precisas. Se activa con `display: grid`.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".galeria {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\n  gap: 1rem;\n}\n\n.destacado {\n  grid-column: 1 / -1; /* ocupa toda la fila */\n}"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "term": "Headers",
+    "letter": "H",
+    "definition": "Metadatos adjuntos a una petición o respuesta HTTP que transmiten información como el tipo de contenido, autenticación, caché u origen. Se gestionan mediante la clase `Headers` de la API Fetch.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const cabeceras = new Headers({\n  'Content-Type': 'application/json',\n  'Authorization': 'Bearer token123'\n});\n\nawait fetch('/api/datos', { headers: cabeceras });"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "term": "Herencia",
+    "letter": "H",
+    "definition": "Mecanismo de CSS por el que ciertas propiedades (tipografía, color) se transmiten automáticamente de un elemento padre a sus descendientes. Se puede controlar con los valores `inherit`, `initial`, `unset` y `revert`.",
+    "examples": [
+      {
+        "language": "css",
+        "code": "body {\n  font-family: system-ui;\n  color: #333; /* los elementos hijos heredan estas propiedades */\n}\n\n.excepcion {\n  color: initial; /* cancela la herencia */\n}"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "term": "Interpolación (JS)",
+    "letter": "I",
+    "definition": "Técnica que permite insertar expresiones JavaScript dentro de cadenas de texto (*template literals*) usando la sintaxis `` `${expresión}` ``. Simplifica la concatenación y mejora la legibilidad del código.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const nombre = 'Ana';\nconst edad   = 28;\nconst mensaje = `Hola, ${nombre}. Tienes ${edad} años.`;\nconsole.log(mensaje); // \"Hola, Ana. Tienes 28 años.\""
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "term": "Iteradores JS",
+    "letter": "I",
+    "definition": "Objetos que implementan el protocolo iterador de JavaScript, exponiendo un método `next()` que devuelve `{ value, done }`. Permiten recorrer secuencias de datos de forma controlada y son la base de `for...of` y los generadores (`function*`).",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "function* generador() {\n  yield 1;\n  yield 2;\n  yield 3;\n}\n\nfor (const valor of generador()) {\n  console.log(valor); // 1, 2, 3\n}"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "term": "Layouts",
+    "letter": "L",
+    "definition": "Estructura visual que define la disposición de los elementos en la interfaz. En CSS los layouts se crean con Flexbox, Grid, posicionamiento o el flujo normal del documento.",
+    "examples": [
+      {
+        "language": "css",
+        "code": "/* Layout de dos columnas con Grid */\n.pagina {\n  display: grid;\n  grid-template-columns: 250px 1fr;\n  min-height: 100vh;\n}"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "term": "Lazy Loading",
+    "letter": "L",
+    "definition": "Técnica de optimización que difiere la carga de recursos (imágenes, scripts, componentes) hasta que son necesarios, reduciendo el tiempo de carga inicial y el consumo de ancho de banda.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<!-- Lazy loading nativo en imágenes -->\n<img src=\"foto.jpg\" loading=\"lazy\" alt=\"Descripción\" />"
+      },
+      {
+        "language": "javascript",
+        "code": "// Lazy loading de módulos con import dinámico\nconst modulo = await import('./pesado.js');"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "term": "Librería",
+    "letter": "L",
+    "definition": "Colección de funciones, clases o componentes reutilizables que extienden las capacidades del lenguaje sin imponer una estructura de aplicación. A diferencia de un framework, la librería es invocada por el desarrollador. Ejemplos: Axios, Lodash, D3.js.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "import _ from 'lodash';\nconst unico = _.uniq([1, 2, 2, 3]); // [1, 2, 3]"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "term": "Listeners Huérfanos",
+    "letter": "L",
+    "definition": "Oyentes de eventos registrados sobre elementos del DOM que han sido eliminados del árbol sin haber desregistrado los listeners, provocando fugas de memoria al mantener referencias a objetos que ya no son necesarios.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Problema: el listener permanece en memoria tras eliminar el elemento\nconst btn = document.querySelector('#boton');\nbtn.addEventListener('click', manejar);\nbtn.remove();\n\n// Solución: desregistrar antes de eliminar\nbtn.removeEventListener('click', manejar);\nbtn.remove();"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "term": "Máscaras",
+    "letter": "M",
+    "definition": "Técnica CSS (`mask`) que define qué partes de un elemento son visibles u opacas utilizando una imagen, gradiente o forma como máscara de canal alfa.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".imagen {\n  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);\n}"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "term": "Medición",
+    "letter": "M",
+    "definition": "Proceso de cuantificar el rendimiento de una aplicación web mediante métricas como LCP, FCP, INP, TTFB y CLS. Las herramientas de medición incluyen Lighthouse, la librería Web Vitals y el Performance API del navegador.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const entrada = performance.getEntriesByType('navigation')[0];\nconsole.log('TTFB:', entrada.responseStart - entrada.startTime, 'ms');"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "term": "Memoria",
+    "letter": "M",
+    "definition": "Espacio de almacenamiento temporal (RAM/heap) utilizado por el motor JavaScript para mantener variables, objetos, funciones y referencias durante la ejecución. Su gestión eficiente es clave para evitar fugas y degradación de rendimiento.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Monitoreo de memoria en Chrome DevTools\nconsole.log(performance.memory.usedJSHeapSize);"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "term": "Memory Leaks",
+    "letter": "M",
+    "definition": "Fugas de memoria producidas cuando objetos que ya no son necesarios permanecen referenciados y el Garbage Collector no puede liberarlos. Causas comunes: listeners huérfanos, closures que retienen referencias, e intervalos no limpiados.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Leak: el array crece indefinidamente\nconst datos = [];\nsetInterval(() => datos.push(new Array(1000).fill(0)), 100);\n\n// Solución: guardar la referencia del intervalo y limpiarlo\nconst id = setInterval(() => { /* … */ }, 100);\nclearInterval(id);"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "term": "Módulo",
+    "letter": "M",
+    "definition": "Unidad de código independiente y reutilizable con un ámbito propio. En JavaScript, un módulo es un archivo que exporta funcionalidades e importa de otros módulos, evitando la contaminación del espacio de nombres global.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// utils.js\nexport function formatearFecha(fecha) {\n  return new Intl.DateTimeFormat('es').format(fecha);\n}\n\n// app.js\nimport { formatearFecha } from './utils.js';"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "term": "Nesting",
+    "letter": "N",
+    "definition": "Capacidad de CSS nativo (disponible desde 2023) que permite anidar reglas dentro de otras, siguiendo la estructura del HTML de forma similar a los preprocesadores como Sass. Simplifica la escritura y legibilidad de selectores relacionados.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".tarjeta {\n  padding: 1rem;\n\n  & h2 { font-size: 1.5rem; }\n\n  &:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }\n}"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "term": "Node.js",
+    "letter": "N",
+    "definition": "Entorno de ejecución de JavaScript fuera del navegador, construido sobre el motor V8 de Chrome. Permite ejecutar código JavaScript del lado del servidor y dispone de un sistema de módulos, acceso al sistema de archivos y APIs de red.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const http = require('http');\nhttp.createServer((req, res) => {\n  res.end('Hola desde Node.js');\n}).listen(3000);"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "term": "Notación Big O(N)",
+    "letter": "N",
+    "definition": "Notación matemática que describe la complejidad temporal o espacial de un algoritmo en función del tamaño de la entrada (`n`), en el peor caso. Permite comparar la eficiencia de algoritmos independientemente del hardware.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const primero = array[0];            // O(1)  — acceso directo\n\nfor (const item of array) { }        // O(n)  — recorrido lineal\n\nfor (let i = 0; i < n; i++)\n  for (let j = 0; j < n; j++) { }   // O(n²) — bucle anidado"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "term": "Optimización",
+    "letter": "O",
+    "definition": "Proceso de mejorar el rendimiento de una aplicación web reduciendo tiempos de carga, consumo de memoria y operaciones innecesarias. Abarca estrategias como minificación, lazy loading, caché, tree shaking y medición con Core Web Vitals.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// vite.config.js — minificación automática en producción\nexport default { build: { minify: 'esbuild' } };"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "term": "Overflow",
+    "letter": "O",
+    "definition": "Propiedad CSS que controla qué ocurre cuando el contenido de un elemento supera su tamaño definido. Valores: `visible` (por defecto), `hidden`, `scroll`, `auto` y `clip`.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".caja {\n  width: 200px;\n  height: 100px;\n  overflow: auto; /* scroll solo si es necesario */\n}\n\n.texto-truncado {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "term": "Paquetes",
+    "letter": "P",
+    "definition": "Unidades de software distribuibles que contienen módulos, dependencias y metadatos (`package.json`). Se instalan mediante gestores de paquetes como npm, pnpm o Yarn desde registros como npmjs.com.",
+    "examples": [
+      {
+        "language": "bash",
+        "code": "pnpm add lodash        # instalar dependencia\npnpm add -D vite       # instalar dependencia de desarrollo"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "term": "Patrones",
+    "letter": "P",
+    "definition": "Soluciones reutilizables y probadas a problemas recurrentes en el diseño de software. En JavaScript destacan patrones como Módulo, Singleton, Observer, Factory y Estrategia.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Patrón Singleton\nclass Config {\n  static #instancia;\n  static obtener() {\n    if (!Config.#instancia) Config.#instancia = new Config();\n    return Config.#instancia;\n  }\n}"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "term": "Peticiones HTTP",
+    "letter": "P",
+    "definition": "Mensajes enviados desde un cliente (navegador) a un servidor mediante el protocolo HTTP/HTTPS. Se componen de método (GET, POST, PUT, DELETE, PATCH), URL, cabeceras y, opcionalmente, un cuerpo de datos.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// GET — obtener datos\nawait fetch('/api/usuarios');\n\n// POST — enviar datos\nawait fetch('/api/usuarios', {\n  method: 'POST',\n  body: JSON.stringify({ nombre: 'Carlos' }),\n  headers: { 'Content-Type': 'application/json' }\n});"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "term": "Plugin",
+    "letter": "P",
+    "definition": "Extensión de software que añade funcionalidad específica a una aplicación host sin modificar su código fuente. En Vite y otros bundlers, los plugins interceptan el proceso de construcción para transformar ficheros, inyectar código o generar assets.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// vite.config.js\nimport vue from '@vitejs/plugin-vue';\nexport default {\n  plugins: [vue()]\n};"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "term": "pnpm",
+    "letter": "P",
+    "definition": "Gestor de paquetes para JavaScript que utiliza un almacén global de dependencias con enlaces simbólicos, evitando la duplicación de paquetes entre proyectos. Es más rápido y eficiente en espacio de disco que npm o Yarn.",
+    "examples": [
+      {
+        "language": "bash",
+        "code": "pnpm install           # instalar dependencias\npnpm add react         # agregar paquete\npnpm run dev           # ejecutar script\npnpm dlx create-vite   # ejecutar sin instalar globalmente"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "term": "Popovers",
+    "letter": "P",
+    "definition": "Capa de contenido flotante que se muestra sobre el resto de la página, activada por un elemento de control. La API Popover nativa de HTML (atributo `popover`) permite implementarlos sin JavaScript, gestionando foco, cierre con `Escape` y el nivel superior del DOM.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<button popovertarget=\"menu\">Abrir menú</button>\n<div id=\"menu\" popover>\n  <p>Contenido del popover</p>\n</div>"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "term": "Posición (JavaScript)",
+    "letter": "P",
+    "definition": "Índice numérico basado en cero que indica la ubicación de un carácter dentro de una cadena o de un elemento dentro de un array. Se utiliza en métodos como `indexOf()`, `slice()`, `splice()` y `at()`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const texto = \"JavaScript\";\nconsole.log(texto.indexOf('S')); // 4\nconsole.log(texto.at(-1));        // \"t\" (última posición)\n\nconst arr = [10, 20, 30];\nconsole.log(arr.at(0));           // 10"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "term": "Position (CSS)",
+    "letter": "P",
+    "definition": "Propiedad CSS que controla el método de posicionamiento de un elemento en el documento. Valores: `static` (flujo normal), `relative`, `absolute`, `fixed` y `sticky`.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".cabecera-fija {\n  position: sticky;\n  top: 0;\n  z-index: 100;\n}\n\n.etiqueta {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n}"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "term": "Profundidad (z-index)",
+    "letter": "P",
+    "definition": "Orden de apilamiento de los elementos posicionados en el eje Z (perpendicular a la pantalla). Se controla con la propiedad `z-index` y solo afecta a elementos que crean un contexto de apilamiento.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".modal-overlay { position: fixed;    z-index: 1000; }\n.modal-dialogo { position: fixed;    z-index: 1001; }\n.tooltip       { position: absolute; z-index: 500; }"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "term": "Promesas",
+    "letter": "P",
+    "definition": "Objeto JavaScript que representa el resultado eventual (éxito o fracaso) de una operación asíncrona. Tienen tres estados: `pending`, `fulfilled` y `rejected`, y se encadenan con `.then()`, `.catch()` y `.finally()`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const promesa = new Promise((resolve, reject) => {\n  setTimeout(() => resolve('dato'), 1000);\n});\n\npromesa\n  .then(dato  => console.log(dato))\n  .catch(err  => console.error(err))\n  .finally(() => console.log('finalizado'));"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "term": "Promesa de Control",
+    "letter": "P",
+    "definition": "Patrón que expone el `resolve` y `reject` de una Promesa fuera de su constructor, permitiendo resolver o rechazar la Promesa desde código externo. En JavaScript moderno se implementa con `Promise.withResolvers()`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const { promise, resolve, reject } = Promise.withResolvers();\n\nsetTimeout(() => resolve('completado'), 2000);\nconst resultado = await promise;\nconsole.log(resultado); // 'completado'"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "term": "Propagación de Eventos",
+    "letter": "P",
+    "definition": "Mecanismo por el que un evento recorre el árbol del DOM en tres fases: captura (del documento al target), target y burbujeo (del target hacia el documento). Se controla con `stopPropagation()` y el parámetro `capture` de `addEventListener`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Técnica de delegación de eventos mediante propagación\ndocument.querySelector('ul').addEventListener('click', (e) => {\n  if (e.target.matches('li')) {\n    console.log('Elemento:', e.target.textContent);\n  }\n});"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "term": "Pseudoelemento",
+    "letter": "P",
+    "definition": "Selector CSS que permite estilizar una parte específica de un elemento sin añadir HTML adicional. Los más usados son `::before`, `::after`, `::placeholder`, `::selection` y `::first-line`.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".enlace::after {\n  content: ' →';\n  font-weight: bold;\n}\n\np::first-line {\n  font-variant: small-caps;\n}"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "term": "Reactividad",
+    "letter": "R",
+    "definition": "Paradigma en el que la interfaz de usuario se actualiza automáticamente en respuesta a cambios en el estado de los datos, sin necesidad de manipular el DOM manualmente. Es el fundamento de frameworks como Vue, React (con hooks) y Solid.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Vue 3 — signal reactivo\nimport { ref } from 'vue';\nconst contador = ref(0);\ncontador.value++; // la UI se actualiza automáticamente"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "term": "Recortes",
+    "letter": "R",
+    "definition": "Técnica CSS (`clip-path`) que define una región visible de un elemento, ocultando el contenido exterior al recorte. Admite formas básicas (`circle`, `polygon`, `inset`) y rutas SVG.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".hexagono {\n  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);\n}\n\n.circulo {\n  clip-path: circle(50%);\n}"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "term": "Renderización",
+    "letter": "R",
+    "definition": "Proceso mediante el cual el navegador convierte el código HTML, CSS y JavaScript en píxeles visibles en pantalla. Incluye las etapas de parsing, construcción del árbol de render, layout, paint y compositing.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Leer offsetHeight fuerza un reflow (layout) inmediato\nconst alto = elemento.offsetHeight;\nelemento.style.height = `${alto + 10}px`; // desencadena paint"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "term": "Request",
+    "letter": "R",
+    "definition": "Objeto de la API Fetch que representa una petición HTTP, incluyendo URL, método, cabeceras y cuerpo. Puede construirse manualmente para reutilizarse o modificarse antes de enviarlo con `fetch()`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const peticion = new Request('/api/datos', {\n  method: 'GET',\n  headers: { 'Accept': 'application/json' }\n});\n\nconst respuesta = await fetch(peticion);"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "term": "Resource Hints",
+    "letter": "R",
+    "definition": "Directivas HTML que permiten indicar al navegador recursos que se necesitarán pronto, para que los precargue o prefetche optimizando el tiempo de carga. Incluye `preload`, `prefetch`, `preconnect` y `dns-prefetch`.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<link rel=\"preload\"     href=\"fuente.woff2\" as=\"font\" crossorigin />\n<link rel=\"preconnect\"  href=\"https://api.ejemplo.com\" />\n<link rel=\"prefetch\"    href=\"/pagina-siguiente.html\" />"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "term": "Response",
+    "letter": "R",
+    "definition": "Objeto de la API Fetch que representa la respuesta a una petición HTTP. Expone el estado (`status`, `ok`), cabeceras y métodos para leer el cuerpo en distintos formatos: `.json()`, `.text()`, `.blob()` y `.arrayBuffer()`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const res = await fetch('/api/datos');\nif (!res.ok) throw new Error(`HTTP ${res.status}`);\nconst datos = await res.json();"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "term": "Responsive (Diseño Adaptativo)",
+    "letter": "R",
+    "definition": "Enfoque de diseño web en el que la interfaz se adapta fluidamente a diferentes tamaños de pantalla y dispositivos, mediante media queries, unidades relativas, layouts fluidos e imágenes adaptables.",
+    "examples": [
+      {
+        "language": "css",
+        "code": "/* Mobile first */\n.tarjeta { width: 100%; }\n\n@media (min-width: 768px)  { .tarjeta { width: 50%; } }\n@media (min-width: 1024px) { .tarjeta { width: 33.33%; } }"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "term": "Ritmo",
+    "letter": "R",
+    "definition": "En tipografía web, el espacio vertical consistente entre líneas y bloques de texto que crea una cadencia visual armónica. Se logra definiendo una línea base (`line-height`) y aplicando espaciados múltiplos de esa unidad.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ":root { --ritmo: 1.5rem; }\n\np {\n  line-height: var(--ritmo);\n  margin-bottom: var(--ritmo);\n}"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "term": "Sanitizar Datos",
+    "letter": "S",
+    "definition": "Proceso de limpiar y validar datos de entrada del usuario para eliminar contenido malicioso (como scripts XSS) antes de insertarlos en el DOM, la base de datos o las respuestas del servidor.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// API Sanitizer nativa del navegador\nconst sanitizador = new Sanitizer();\nelemento.setHTML(entradaUsuario, { sanitizer: sanitizador });\n\n// Nunca insertar datos no confiables con innerHTML\n// elemento.innerHTML = entradaUsuario; ← PELIGROSO (XSS)"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "term": "Selectores",
+    "letter": "S",
+    "definition": "Patrones CSS que identifican uno o más elementos del DOM a los que se aplicarán estilos. Existen selectores de tipo, clase, ID, atributo, pseudoclase, pseudoelemento y combinadores.",
+    "examples": [
+      {
+        "language": "css",
+        "code": "h1            { /* selector de tipo */ }\n.clase        { /* selector de clase */ }\n#id           { /* selector de ID */ }\n[type=\"text\"] { /* selector de atributo */ }\na:hover       { /* pseudoclase */ }\np::first-line { /* pseudoelemento */ }"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "term": "Semántica",
+    "letter": "S",
+    "definition": "Uso de elementos HTML que transmiten significado sobre el contenido que encierran, más allá de su apariencia visual. Los elementos semánticos (`<article>`, `<nav>`, `<header>`, `<main>`) mejoran la accesibilidad y el SEO.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<!-- No semántico -->\n<div class=\"nav\"><div class=\"item\">Inicio</div></div>\n\n<!-- Semántico -->\n<nav>\n  <ul><li><a href=\"/\">Inicio</a></li></ul>\n</nav>"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "term": "Separar (Split)",
+    "letter": "S",
+    "definition": "Operación que divide una cadena de texto en un array de subcadenas según un separador definido. En JavaScript se realiza con `String.prototype.split()`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const csv = \"manzana,naranja,pera\";\nconst frutas = csv.split(',');\nconsole.log(frutas); // ['manzana', 'naranja', 'pera']"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "term": "Servidor HTTP",
+    "letter": "S",
+    "definition": "Programa que escucha peticiones HTTP entrantes y devuelve respuestas (páginas HTML, datos JSON, archivos estáticos). En Node.js puede crearse con el módulo nativo `http` o con frameworks como Express.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "import express from 'express';\nconst app = express();\n\napp.get('/api/saludo', (req, res) => {\n  res.json({ mensaje: 'Hola desde el servidor' });\n});\n\napp.listen(3000);"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "term": "Shadow DOM",
+    "letter": "S",
+    "definition": "API de la plataforma web que permite encapsular el árbol DOM y los estilos CSS de un componente en un subárbol privado, aislado del documento principal. Es la base de los Web Components y garantiza que los estilos no escapen ni contaminen el exterior.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "class MiComponente extends HTMLElement {\n  constructor() {\n    super();\n    const shadow = this.attachShadow({ mode: 'open' });\n    shadow.innerHTML = `<style>p { color: navy; }</style><p>Encapsulado</p>`;\n  }\n}"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "term": "Slots (Ranuras HTML)",
+    "letter": "S",
+    "definition": "Marcadores de posición definidos dentro del Shadow DOM de un Web Component que permiten al consumidor inyectar contenido propio. Se declaran con `<slot>` en el template del componente y se llenan en el light DOM.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<!-- Template del componente -->\n<slot name=\"titulo\">Título por defecto</slot>\n<slot></slot>\n\n<!-- Consumidor -->\n<mi-tarjeta>\n  <h2 slot=\"titulo\">Mi título personalizado</h2>\n  <p>Contenido del slot por defecto.</p>\n</mi-tarjeta>"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "term": "SpeechSynthesis",
+    "letter": "S",
+    "definition": "API del navegador que permite convertir texto a voz utilizando las voces disponibles en el sistema operativo. Forma parte de la Web Speech API y permite controlar velocidad, tono e idioma de la locución.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const enunciado = new SpeechSynthesisUtterance('Hola, mundo');\nenunciado.lang = 'es-ES';\nenunciado.rate = 1.2;\nspeechSynthesis.speak(enunciado);"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "term": "Storage API",
+    "letter": "S",
+    "definition": "Conjunto de APIs del navegador para almacenar datos en el cliente. Incluye `localStorage` (persistente entre sesiones), `sessionStorage` (vida de la pestaña) y la `Cache API` para recursos de red.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "localStorage.setItem('tema', 'oscuro');\nconst tema = localStorage.getItem('tema');\n\nsessionStorage.setItem('carrito', JSON.stringify([{ id: 1 }]));"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "term": "Thennables",
+    "letter": "T",
+    "definition": "Objetos que implementan un método `.then()` compatible con la especificación Promises/A+, haciéndolos interoperables con las Promesas nativas de JavaScript sin necesidad de ser instancias de `Promise`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const thenable = {\n  then(resolve) { resolve('valor desde thenable'); }\n};\n\nconst resultado = await Promise.resolve(thenable);\nconsole.log(resultado); // 'valor desde thenable'"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "term": "Tiempo (Optimización)",
+    "letter": "T",
+    "definition": "Dimensión de rendimiento web que mide la duración de operaciones (scripts, renders, peticiones). Las métricas clave incluyen TTFB (*Time to First Byte*), FCP (*First Contentful Paint*) y LCP (*Largest Contentful Paint*).",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const t0 = performance.now();\noperacionCostosa();\nconst t1 = performance.now();\nconsole.log(`Duración: ${t1 - t0} ms`);"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "term": "Transferencia",
+    "letter": "T",
+    "definition": "Volumen de datos enviados entre servidor y cliente durante la carga de una página. Su optimización incluye compresión (Gzip/Brotli), minificación de assets, uso de formatos eficientes (WebP, AVIF) y políticas de caché agresivas.",
+    "examples": [
+      {
+        "language": "html",
+        "code": "<picture>\n  <source srcset=\"foto.avif\" type=\"image/avif\" />\n  <source srcset=\"foto.webp\" type=\"image/webp\" />\n  <img src=\"foto.jpg\" alt=\"Descripción\" />\n</picture>"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "term": "Transiciones",
+    "letter": "T",
+    "definition": "Propiedad CSS que anima el cambio de valor de una propiedad entre dos estados de forma suave y controlada. Se define especificando la propiedad, duración, función de temporización y retardo.",
+    "examples": [
+      {
+        "language": "css",
+        "code": ".boton {\n  background: navy;\n  transition: background 0.3s ease, transform 0.2s ease;\n}\n\n.boton:hover {\n  background: royalblue;\n  transform: scale(1.05);\n}"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "term": "Transpilar",
+    "letter": "T",
+    "definition": "Proceso de convertir código fuente de un lenguaje (o versión de lenguaje) a otro equivalente, para garantizar compatibilidad con entornos que no soportan la sintaxis original. Herramientas como Babel y LightningCSS transcompilan TypeScript/JSX y CSS moderno respectivamente.",
+    "examples": [
+      {
+        "language": "typescript",
+        "code": "// Entrada (TypeScript)\nconst doble = (n: number): number => n * 2;\n\n// Salida transpilada (ES5)\nvar doble = function(n) { return n * 2; };"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "term": "Tree Shaking",
+    "letter": "T",
+    "definition": "Técnica de optimización aplicada por bundlers (Vite, Rollup, webpack) que elimina el código exportado pero no importado (*dead code*) del bundle final, reduciendo su tamaño.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// Solo 'sumar' se incluye en el bundle; 'restar' se elimina si no se importa\nimport { sumar } from './matematicas.js';"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "term": "Unidades",
+    "letter": "U",
+    "definition": "Sufijos numéricos en CSS que indican la escala o referencia de una medida. Se dividen en absolutas (`px`, `cm`, `pt`) y relativas (`%`, `em`, `rem`, `vw`, `vh`, `dvh`, `cqw`).",
+    "examples": [
+      {
+        "language": "css",
+        "code": ":root { font-size: 16px; }\n\n.caja {\n  width: 50%;          /* relativa al padre */\n  padding: 1rem;       /* relativa al root font-size */\n  max-height: 90dvh;   /* relativa al viewport dinámico */\n}"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "term": "Unir (Join)",
+    "letter": "U",
+    "definition": "Operación que combina los elementos de un array en una sola cadena de texto, separados por un delimitador. En JavaScript se realiza con `Array.prototype.join()`.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const frutas = ['manzana', 'naranja', 'pera'];\nconsole.log(frutas.join(', '));  // \"manzana, naranja, pera\"\nconsole.log(frutas.join(' - ')); // \"manzana - naranja - pera\""
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "term": "Variables de Entorno",
+    "letter": "V",
+    "definition": "Valores de configuración externos al código fuente que varían según el entorno de ejecución (desarrollo, staging, producción). En proyectos Node.js/Vite se definen en archivos `.env` y se acceden mediante `process.env` o `import.meta.env`.",
+    "examples": [
+      {
+        "language": "bash",
+        "code": "# .env\nVITE_API_URL=https://api.ejemplo.com"
+      },
+      {
+        "language": "javascript",
+        "code": "const url = import.meta.env.VITE_API_URL;"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "term": "Virtual DOM",
+    "letter": "V",
+    "definition": "Representación ligera en memoria del DOM real, utilizada por frameworks como React. Al cambiar el estado, el framework compara el Virtual DOM anterior y el nuevo (*diffing*) y aplica solo las diferencias mínimas al DOM real, optimizando las actualizaciones.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "// React actualiza solo el texto del botón, no recrea el DOM completo\nfunction Contador() {\n  const [n, setN] = React.useState(0);\n  return <button onClick={() => setN(c => c + 1)}>{n}</button>;\n}"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "term": "Vite",
+    "letter": "V",
+    "definition": "Herramienta de construcción (*build tool*) y servidor de desarrollo ultrarrápido para proyectos JavaScript modernos. Usa ESM nativo en desarrollo para evitar bundling, y Rollup/Rolldown en producción para generar bundles optimizados.",
+    "examples": [
+      {
+        "language": "bash",
+        "code": "pnpm create vite mi-proyecto --template vanilla\npnpm run dev"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "term": "Web Components",
+    "letter": "W",
+    "definition": "Conjunto de estándares web nativos (Custom Elements, Shadow DOM, HTML Templates) que permiten crear componentes de interfaz reutilizables, encapsulados e interoperables entre frameworks y sin dependencias externas.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "class ContadorWeb extends HTMLElement {\n  connectedCallback() {\n    this.attachShadow({ mode: 'open' });\n    this.shadowRoot.innerHTML = `<button>Contador: 0</button>`;\n  }\n}\ncustomElements.define('contador-web', ContadorWeb);"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "term": "WebSockets API",
+    "letter": "W",
+    "definition": "Protocolo y API que establece un canal de comunicación bidireccional y persistente entre cliente y servidor sobre una única conexión TCP. Permite transmisión de datos en tiempo real sin el overhead del polling HTTP.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "const socket = new WebSocket('wss://servidor.com/chat');\n\nsocket.addEventListener('open',    ()    => socket.send('Conectado'));\nsocket.addEventListener('message', (evt) => console.log(evt.data));\nsocket.addEventListener('close',   ()    => console.log('Desconectado'));"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "term": "Windowing",
+    "letter": "W",
+    "definition": "Técnica de virtualización de listas que renderiza únicamente los elementos visibles en el viewport, en lugar de todos a la vez, permitiendo manejar colecciones de miles de ítems con alto rendimiento. También conocida como *virtual scrolling*.",
+    "examples": [
+      {
+        "language": "javascript",
+        "code": "function elementosVisibles(items, scrollY, alturaItem, alturaViewport) {\n  const inicio = Math.floor(scrollY / alturaItem);\n  const fin    = inicio + Math.ceil(alturaViewport / alturaItem);\n  return items.slice(inicio, fin);\n}"
+      }
+    ]
+  }
+]
